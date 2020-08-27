@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1> Euler Problem 3</h1>
+<p>
+The prime factors of 13195 are 5, 7, 13 and 29.
+</br>
+What is the largest prime factor of the number 600851475143 ?
+</p>
+<p>Answer is: <em>
+    <script type="text/javascript">
+        let primeFactors = [];
+        let number = 600851475143;
+        let i = 0;
+        for(let index = 2; index<number; index++){
+            if(number % index === 0){
+                number = number / index;
+                primeFactors[i++] = index ;
+            }
+        }
+        primeFactors[i] = number;
+        const largestPrimeFactor = primeFactors[i];
+        document.write("</br>All prime Factors: ");
+        primeFactors.forEach(element => {
+            document.write(element+"\t");    
+        });
+        document.write("</br>Largest Factor: "+largestPrimeFactor);
+    </script>
+
+</em></p>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Euler Problem 4</h1>
+    <p>
+
+        A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+        </br>
+        Find the largest palindrome made from the product of two 3-digit numbers.
+        </p>
+        <p>Answer is: <em>
+            <script type="text/javascript">
+            let number = 100;
+            let largest3Digit = 999;
+            let largestPalindrome = 0;
+            
+            const isPalindrome = (toCheck)=>
+            (toCheck.toString() === toCheck.toString().split("").reverse().join("")) ? true : false;
+
+            for(let i = number ; i <= largest3Digit;i++){
+                for(let j = number ; j <= largest3Digit ; j++ ){
+                    let result = i * j;
+                    if(isPalindrome(result)){
+                        if(result>largestPalindrome)
+                        largestPalindrome = result;
+                    }
+                }
+            }
+            document.write(largestPalindrome);
+                
+            
+            </script>
+        </em></p>
+</body>
+</html>
