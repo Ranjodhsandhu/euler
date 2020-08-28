@@ -17,7 +17,19 @@
         <p>Answer is: <em>
             <script type="text/javascript">
                 let number = 20;
+                let smallestNumber = 0;
                 
+                while(true){
+                    let i = 1;
+                    for(; i <= 20;i++){
+                        if(smallestNumber % i === 0) console.log("");
+                        else break;
+                    }
+                    if(i==20) break;
+                    else smallestNumber++;
+                    console.log(smallestNumber);
+                }
+                document.write(smallestNumber);
             </script>
         </em></p>
 </body>
